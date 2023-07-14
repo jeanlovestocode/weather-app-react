@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+/* .App-logo { */
+  /* height: 40vmin;
   pointer-events: none;
 }
 
@@ -11,7 +11,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -28,11 +28,192 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  background: #8dc6ff;
 }
+
+h1 {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0px;
+  font-family: "Playfair Display", serif;
+}
+
+#city-input {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 20px;
+  font-family: "Playfair Display", serif;
+}
+#emojicon {
+  width: 30px;
+}
+#icon {
+  width: 70px;
+}
+
+footer {
+  text-align: center;
+  font-weight: bolder;
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+}
+
+.degree {
+  font-weight: 300;
+}
+
+.btn {
+  margin: 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 6px;
+  text-align: center;
+  background: #fceeee;
+  color: #212529;
+  font-family: "Playfair Display", serif;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.header {
+  margin: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.first-degree {
+  font-size: 50px;
+}
+
+.unit-celcius {
+  text-decoration: none;
+  color: #936b86;
+}
+.unit-farenheit {
+  text-decoration: none;
+  color: #936b86;
+}
+
+.units {
+  position: relative;
+  bottom: 65px;
+  left: 60px;
+}
+
+.active {
+  cursor: default;
+  color: #212529;
+}
+
+.col-2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.wind-speed {
+  font-family: "Playfair Display", serif;
+}
+
+.outro-text {
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+}
+
+.card {
+  text-align: center;
+  font-weight: bolder;
+  background: #fceeee;
+  margin: 2px auto;
+  padding: 20px;
+  border: 1px solid #936b86;
+  border-radius: 10px;
+}
+
+.daily-forecast {
+  display: block;
+  margin: 0px auto;
+  border: 1px solid #936b86;
+  border-radius: 6px;
+  background: #b9ebfe;
+  font-size: 12px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+
+#day-forecast {
+  font-family: "Playfair Display", serif;
+}
+
+.hourly-forecast {
+  display: block;
+  margin: 4px auto;
+  border: 1px solid #936b86;
+  border-radius: 6px;
+  background: #936b86;
+  color: #fff;
+  font-size: 11px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+
+#hourly-forecast {
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  font-size: small;
+  font-family: "Playfair Display", serif;
+}
+
+section {
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-icon {
+  font-size: 48px;
+  color: #b9ebfe;
+}
+
+#max {
+  font-weight: bold;
+}
+#min {
+  font-weight: lighter;
+  color: grey;
+}
+.current-weather {
+  font-family: "Playfair Display", serif;
+}
+.date {
+  font-family: "Playfair Display", serif;
+}
+
+/* .locator{
+  width: 230px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: fixed;
+  top: 30px;
+  right: 25px;
+  margin: 100px;
+  background: none;
+  padding: 4px;
+  font-family: 'Playfair Display', serif;
+ 
+/* } */
+/* i commented out this part in case i ever want to show the current location button  */
