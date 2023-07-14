@@ -22,7 +22,7 @@ export default function Footer() {
           <small>
             Coded by
             <a
-              href="https://github.com/jeanlovestocode/SheCodes-Plus/tree/main"
+              href="https://github.com/jeanlovestocode/weather-app-react"
               class="outro-text"
             >
               Jean Edem🏄‍♀️
