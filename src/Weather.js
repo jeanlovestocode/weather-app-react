@@ -16,7 +16,7 @@ export default function Weather(props) {
     <Hearts
       height="80"
       width="80"
-      color="#white"
+      color="white"
       ariaLabel="hearts-loading"
       wrapperStyle={{}}
       wrapperClass=""
