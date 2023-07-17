@@ -12,15 +12,17 @@ import Footer from "./Footer";
 export default function App() {
   return (
     <div className="App">
-      <Header />
+      <div className="container">
+          <Header />
 
-      <Temperature />
+          <Temperature />
 
-      <Dailyforecast />
+          <Dailyforecast />
 
-      <Hourlyforecast />
+          <Hourlyforecast />
 
-      <Footer />
+          <Footer />
+      </div>
     </div>
   );
 }
