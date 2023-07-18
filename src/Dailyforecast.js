@@ -4,9 +4,9 @@ export default function Dailyforecast() {
   return (
     <div>
       <div className="container">
-        <button className="daily-forecast">
+        {/* <button className="daily-forecast">
           <i className="bi bi-calendar3"></i> 5-DAY FORECAST
-        </button>
+        </button> */}
       </div>
 
       <div>

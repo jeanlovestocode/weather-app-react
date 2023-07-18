@@ -4,9 +4,9 @@ export default function Hourlyforecast() {
   return (
     <div>
       <div className="container">
-        <button className="hourly-forecast">
+        {/* <button className="hourly-forecast">
           <i className="bi bi-clock"></i> HOURLY FORECAST
-        </button>
+        </button> */}
       </div>
 
       <div>
