@@ -1,26 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
 
-export default function Temperature() {
-  return (
+export default function Temperature(props) {
+
+
+  const [weatherData, setWeatherData] = useState({loaded: false});
+ 
+
+  function handleResponse(response) {
+    console.log(response.data);
+    setWeatherData({
+      loaded: true,
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+      date: "Monday, July 17 5:00",
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+    });
+  
+  };
+
+  if(weatherData.loaded) {
+    return (
     <div className="container">
-      <h1>Toronto</h1>
+      <h1>{weatherData.city}</h1>
 
-      <h5>Monday, July 17 5:00</h5>
+      <h5>{weatherData.date}</h5>
 
       <div className="row">
         <div className="col-6">
           <div>
-            <span className="main-temperature">27</span>
+            <span className="main-temperature">{Math.round(weatherData.temperature)}</span>
             <span className="unit-celcius units">°C</span>
             <span className="unit-farenheit units"> | °F</span>
           </div>
           <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="main-weather-icon"
+            src={weatherData.iconUrl}
+            alt={weatherData.description}
           />
 
           <ul>
-            <li className="weather-description">mostly cloudy</li>
+            <li className="weather-description text-capitalize">{weatherData.description}</li>
             <li>
               <span className="high-temp"> H: 31°</span>
               {"  "}
@@ -31,46 +53,22 @@ export default function Temperature() {
         <div className="col-6 prop">
           <ul className="weather-properties">
             <li>precipitation: 15%</li>
-            <li>humidity: 32%</li>
-            <li>wind: 2km/h</li>
+            <li>humidity: {weatherData.humidity}%</li>
+            <li>wind: {weatherData.wind}km/h</li>
           </ul>
         </div>
       </div>
-
-      {/* <br />
-      <br />
-
-      <h2 className="first-degree">26</h2>
-
-      <span className="units">
-        <a
-          href="https://www.metric-conversions.org/temperature/celsius-to-fahrenheit.htm"
-          //   change this shit later
-          className="unit-celcius active"
-        >
-          {" "}
-          °C{" "}
-        </a>{" "}
-        |
-      </span>
-      <span className="units">
-        <a
-          href="https://www.metric-conversions.org/temperature/celsius-to-fahrenheit.htm"
-          //   change this shit later
-          className="unit-farenheit"
-        >
-          {" "}
-          °F{" "}
-        </a>
-      </span>
-
-      <small>
-        <div className="current-weather">Windy</div>
-        <div className="wind-speed"></div>
-        <div className="max-min">
-          H:<span className="high"></span>° L:<span className="low"></span>°
-        </div>
-      </small> */}
     </div>
-  );
+    );
+} else {
+  const apiKey = "e0a5a97de9a0b7a951e9d154a8f9bad8";
+  let apiUrl =
+    `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(handleResponse);
+
+  return ("Loading...");
 }
+
+} 
+
+     

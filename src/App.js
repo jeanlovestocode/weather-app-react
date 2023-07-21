@@ -16,7 +16,7 @@ export default function App() {
           <Header />
           <br />
 
-          <Temperature />
+          <Temperature defaultCity="Dubai"/>
 
           <Dailyforecast />
 
