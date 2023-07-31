@@ -76,6 +76,10 @@
   line-height: 1;
   font-size: 15px;
 }
+
+#conversion a{
+  text-decoration: none;
+}
 /* .App units {
   position: relative;
   bottom: 65px;
