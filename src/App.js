@@ -4,8 +4,7 @@ import "./App.css";
 
 // import "./styles.css";
 import Temperature from "./Temperature";
-import Dailyforecast from "./Dailyforecast";
-import Hourlyforecast from "./Hourlyforecast";
+
 import Footer from "./Footer";
 
 export default function App() {
@@ -16,9 +15,8 @@ export default function App() {
 
         <Temperature defaultCity="Toronto" />
 
-        <Dailyforecast />
 
-        <Hourlyforecast />
+     
 
         <Footer />
       </div>

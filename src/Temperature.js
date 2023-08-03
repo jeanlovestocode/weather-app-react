@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
-
+import DailyForecast from "./DailyForecast";
 
 export default function Temperature(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
@@ -11,13 +11,14 @@ export default function Temperature(props) {
     console.log(response.data);
     setWeatherData({
       loaded: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
-      icon: response.data.weather[0].icon
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -61,6 +62,8 @@ export default function Temperature(props) {
           </form>
         </div>
         <WeatherInfo data={weatherData} />
+        <br />
+        <DailyForecast coordinates ={weatherData.coordinates} />
       </div>
     );
   } else {
