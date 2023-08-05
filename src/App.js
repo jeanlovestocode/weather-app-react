@@ -13,7 +13,7 @@ export default function App() {
       <div className="container">
         <br />
 
-        <Temperature defaultCity="Toronto" />
+        <Temperature defaultCity="Dubai" />
 
 
      
