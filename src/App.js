@@ -2,7 +2,7 @@ import React from "react";
 
 import "./App.css";
 
-// import "./styles.css";
+
 import Temperature from "./Temperature";
 
 import Footer from "./Footer";
