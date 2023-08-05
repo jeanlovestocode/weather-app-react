@@ -23,7 +23,7 @@ export default function Footer() {
             Coded by
             <a
               href="https://github.com/jeanlovestocode/weather-app-react"
-              class="outro-text"
+              className="outro-text"
             >
               Jean Edem🏄‍♀️
             </a>
