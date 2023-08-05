@@ -23,11 +23,6 @@ export default function WeatherInfo(props) {
             <li className="weather-description text-capitalize">
               {props.data.description}
             </li>
-            <li>
-              <span className="high-temp"> H: 31°</span>
-              {"  "}
-              <span className="low-temp">L: 28°</span>
-            </li>
           </ul>
         </div>
         <div className="col-6 prop">

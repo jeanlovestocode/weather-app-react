@@ -63,7 +63,7 @@ export default function Temperature(props) {
         </div>
         <WeatherInfo data={weatherData} />
         <br />
-        <DailyForecast coordinates ={weatherData.coordinates} />
+        <DailyForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
