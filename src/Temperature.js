@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
-import DailyForecast from "./DailyForecast";
+import DayForecast from "./DayForecast";
 
 export default function Temperature(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
@@ -63,7 +63,7 @@ export default function Temperature(props) {
         </div>
         <WeatherInfo data={weatherData} />
         <br />
-        <DailyForecast coordinates={weatherData.coordinates} />
+        <DayForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
